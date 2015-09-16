@@ -6,7 +6,7 @@ def cantorSet(N, char_print, count):  ##function that prints the cantor set
         return();
     else:
 
-        if(count == 0):  ##prints initial line where there is no whitespace
+        if(count == 0):  ##prints initial line where there is no whitespace and the second line
             print char_print*3**N;
             print char_print*((3**N)/3)," "*(((3**N)/3)-2),char_print*((3**N)/3);
 
