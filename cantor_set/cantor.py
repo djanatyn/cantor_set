@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 ##prints out the cantor ternary set. asks user the number of times to iterate and a char to be used
 
 def cantorSet(N, char_print, count):  ##function that prints the cantor set
