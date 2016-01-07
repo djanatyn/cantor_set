@@ -18,16 +18,21 @@ def cantorSet(N, char_print, count):  ##function that prints the cantor set
             print line;
     return cantorSet(N-1,char_print,count+1);  ##recursive call
 
-N = int(raw_input("Enter the number of iterations: "));
-## need to find a way to check a way to check how many chars fit in a line in the current terminal. inadequate method below: 
-##too_long = True;
-##while(too_long):  ##error checking
-  ##  if(3**N > 210):  ##approx number of chars that fit in a line in my term. should fix!!
-    ##    print "Number of iterations will result in a line outside of screen bounds!"
-      ##  N = int(raw_input("Please enter a smaller number of iterations: "));
-    ##else:
-      ##  too_long = False;
+def main():
+  N = int(raw_input("Enter the number of iterations: "));
 
-char_print = raw_input("Enter the char you wish to print: ");
+  ## need to find a way to check a way to check how many chars fit in a line in the current terminal. inadequate method below: 
+  ##too_long = True;
+  ##while(too_long):  ##error checking
+    ##  if(3**N > 210):  ##approx number of chars that fit in a line in my term. should fix!!
+      ##    print "Number of iterations will result in a line outside of screen bounds!"
+        ##  N = int(raw_input("Please enter a smaller number of iterations: "));
+      ##else:
+        ##  too_long = False;
 
-cantorSet(N,char_print, 0); ##calls recursive function
+  char_print = raw_input("Enter the char you wish to print: "); 
+  cantorSet(N,char_print, 0); ##calls recursive function
+
+if __name__ == '__main__':
+  main()
+
